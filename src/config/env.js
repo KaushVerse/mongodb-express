@@ -2,7 +2,10 @@ import dotenv from "dotenv";
 
 // dotenv sirf local dev ke liye
 if (process.env.NODE_ENV !== "production") {
-  dotenv.config();
+  dotenv.config({ path: ".env.dev" });
+  console.log("Dev Mode");
+} else {
+  console.log("Production Mode");
 }
 
 const isDocker = process.env.IS_DOCKER === "true";

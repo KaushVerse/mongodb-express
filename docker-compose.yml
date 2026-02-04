@@ -9,9 +9,7 @@ services:
     depends_on:
       - mongo
     env_file:
-      - .env
-    environment:
-      IS_DOCKER: "true"
+      - .env.prod
     restart: always
     networks:
       - backend_net
